@@ -23,7 +23,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Screen density
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# Device was launched with M
+# Device was launched with M. This indicates the api level with 
+# which the device was commercially launched with
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=23
 
