@@ -406,8 +406,6 @@ on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 dhcp dhcp
-    chown dhcp dhcp /data/misc/dhcp
 
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
@@ -724,7 +722,7 @@ service config_bluetooth /system/bin/sh /init.qcom.bt.sh "onboot"
     group bluetooth system
     oneshot
 
-service hciattach /system/bin/sh /init.qcom.bt.sh
+service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin
@@ -898,7 +896,7 @@ service ril-daemon1 /system/bin/rild -c 2
     group radio cache inet misc audio sdcard_rw sensors qcom_diag log net_raw diag wakelock
     disabled
 
-service rild1-wrapper /system/bin/sh /init.qcom.ril.sh
+service rild1-wrapper /system/bin/sh /system/etc/init.qcom.ril.sh
     class late_start
     user root
     group root
