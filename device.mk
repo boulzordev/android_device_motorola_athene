@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
 
 # CMActions
 PRODUCT_PACKAGES += \
-    CMActions
+    Actions
 
 # Display
 PRODUCT_PACKAGES += \

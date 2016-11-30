@@ -268,3 +268,4 @@ ro.config.alarm_alert=Oxygen.ogg
 ro.config.ringtone=Moto.ogg
 ro.config.notification_sound=Moto.ogg
 ro.cutoff_voltage_mv=3200
+ro.product.model=Moto G4
