@@ -17,7 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Also get non-open-source specific aspects if available
-$(call inherit-product, vendor/motorola/athene/athene-vendor.mk)
+$(call inherit-product, vendor/motorola/msm8952/athene/athene-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -96,8 +96,8 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml
 
 # Browser
-PRODUCT_PACKAGES += \
-    Gello
+#PRODUCT_PACKAGES += \
+ #   Gello
 
 # Camera
 PRODUCT_PACKAGES += \
