@@ -82,26 +82,25 @@ void vendor_load_properties()
         property_set("ro.telephony.default_network", "10,10");
     }
 
-	if (sku == "XT1625" || sku == "XT1644") {
-		property_set("persist.radio.is_wps_enabled", "true");
-		property_set("ro.radio.imei.sv", "4");
-	}
+    if (sku == "XT1625" || sku == "XT1644") {
+        property_set("persist.radio.is_wps_enabled", "true");
+        property_set("ro.radio.imei.sv", "4");
+    }
 
-	if (sku == "XT1621" || sku == "XT1622" || sku == "XT1640" || sku == "XT1642" || sku == "XT1643") {
-		if (radio == "India") {
-                    property_set("ro.radio.imei.sv", "6");
-                    property_set("persist.radio.is_wps_enabled", "true");
-                }
-                else {
-                    property_set("ro.radio.imei.sv", "3");
-                }
-	}
+    if (sku == "XT1621" || sku == "XT1622" || sku == "XT1640" || sku == "XT1642" || sku == "XT1643") {
+        if (radio == "India") {
+            property_set("ro.radio.imei.sv", "6");
+            property_set("persist.radio.is_wps_enabled", "true");
+        } else {
+            property_set("ro.radio.imei.sv", "3");
+        }
+    }
 
-	if (sku == "XT1626" || sku == "XT1641") {
-		property_set("ro.radio.imei.sv", "2");
-		property_set("persist.radio.is_wps_enabled", "true");
-		property_set("persist.radio.pb.max.match", "10");
-	}
+    if (sku == "XT1626" || sku == "XT1641") {
+        property_set("ro.radio.imei.sv", "2");
+        property_set("persist.radio.is_wps_enabled", "true");
+        property_set("persist.radio.pb.max.match", "10");
+    }
 }
 
 /* Target-Specific Dalvik Heap & HWUI Configuration */
@@ -148,7 +147,6 @@ static void target_ram(void) {
         property_set("ro.hwui.text_small_cache_height", "1024");
         property_set("ro.hwui.text_large_cache_width", "2048");
         property_set("ro.hwui.text_large_cache_height", "1024");
-    
     }
 }
 
@@ -160,8 +158,8 @@ static void num_sims(void) {
     property_set("ro.hw.dualsim", dualsim.c_str());
 
     if (dualsim == "true") {
-            property_set("persist.radio.multisim.config", "dsds");
-	} else {
-            property_set("persist.radio.multisim.config", "");
-	}
+        property_set("persist.radio.multisim.config", "dsds");
+    } else {
+        property_set("persist.radio.multisim.config", "");
+    }
 }

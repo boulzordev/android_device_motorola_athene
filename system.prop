@@ -65,6 +65,7 @@ persist.radio.custom_ecc=1
 mdc_initial_max_retry=10
 persist.radio.sar_sensor=1
 persist.radio.call.audio.output=0
+ro.telephony.call_ring.multiple=false
 
 # Display
 debug.sf.hw=1
@@ -81,9 +82,6 @@ persist.hwc.ptor.enable=true
 persist.mdpcomp_perfhint=50
 persist.metadata_dynfps.disable=true
 
-# Miracast broadcast screen
-persist.debug.wfd.enable=1
-
 # Data
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
@@ -97,8 +95,7 @@ persist.timed.enable=true
 ro.qualcomm.cabl=0
 
 # SDCard
-persist.fuse_sdcard=true
-persist.esdfs_sdcard=true
+ro.sys.sdcardfs=true
 
 # Audio
 af.fast_track_multiplier=1
@@ -152,7 +149,7 @@ camera.lowpower.record.enable=1
 camera.display.lmax=1280x720
 camera.display.umax=1920x1080
 persist.camera.HAL3.enabled=1
-camera.hal1.packagelist=com.skype.raider,com.whatsapp,com.tencent.mm,com.google.android.GoogleCamera
+camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 # CNE
 persist.cne.feature=1
@@ -245,15 +242,16 @@ persist.sys.ssr.restart_level=ALL_ENABLE
 # DRM
 drm.service.enabled=true
 
+# Wi-fi
+net.tcp.2g_init_rwnd=10
+wifi.interface=wlan0
+
 # Play Store
 ro.com.google.clientidbase=android-motorola
 ro.com.google.clientidbase.ms=android-motorola
 ro.com.google.clientidbase.am=android-motorola
 ro.com.google.clientidbase.gmm=android-motorola
 ro.com.google.clientidbase.yt=android-motorola
-
-# SDCard
-ro.sys.sdcardfs=true
 
 #Enable delay service restart
 ro.am.reschedule_service=true

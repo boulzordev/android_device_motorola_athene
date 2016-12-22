@@ -25,10 +25,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Screen density
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# Device was launched with M
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=23
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -86,7 +82,8 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm8952
-
+	
+	
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
@@ -135,8 +132,8 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
- # GPS
- PRODUCT_PACKAGES += \
+# GPS
+PRODUCT_PACKAGES += \
     gps.msm8952 \
     libgnsspps
 
@@ -167,7 +164,7 @@ PRODUCT_PACKAGES += \
 # OEM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/vhw.xml:system/etc/vhw.xml
- 
+	 
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
@@ -182,17 +179,17 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libOmxAacEnc \
     libOmxAmrEnc \
+    libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxSwVencMpeg4 \
     libOmxSwVencHevc \
+    libOmxVdec \
     libOmxVdecHevc \
     libOmxVidcCommon \
+    libOmxVenc \
     libstagefrighthw \
-    libstagefright_soft_flacdec \
-    libOmxCore \
-    libOmxVdec \
-    libOmxVenc
+    libstagefright_soft_flacdec
 
 # IPA Manager
 PRODUCT_PACKAGES += \
@@ -234,10 +231,6 @@ PRODUCT_COPY_FILES += \
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport
-
-# Telephony-ext
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
 
 # Thermal
 PRODUCT_COPY_FILES += \
@@ -283,3 +276,4 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
