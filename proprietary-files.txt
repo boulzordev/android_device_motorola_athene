@@ -710,6 +710,7 @@ vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/libmm-als.so
 vendor/lib/libmm-color-convertor.so
+vendor/lib/libuiblur.so
 vendor/lib/libmm-dspp-utils.so
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmmhttpstack.so
