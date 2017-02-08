@@ -1,7 +1,6 @@
 type mmi-laser-sh, domain;
 type mmi-laser-sh_exec, exec_type, file_type;
 init_daemon_domain(mmi-laser-sh)
-
 allow mmi-laser-sh kmsg_device:chr_file { write open };
 allow mmi-laser-sh persist_file:dir { search open read getattr };
 allow mmi-laser-sh persist_file:file { open read getattr };
