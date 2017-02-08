@@ -271,6 +271,11 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     tcpdump \
     wcnss_service
+    
+    # Enable Google Assistant
+    PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
+ 
 
 PRODUCT_COPY_FILES += \
     kernel/motorola/msm8952/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
