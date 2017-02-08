@@ -265,3 +265,7 @@ ro.config.alarm_alert=Oxygen.ogg
 ro.config.ringtone=Moto.ogg
 ro.config.notification_sound=Moto.ogg
 ro.cutoff_voltage_mv=3200
+#
+# Fix green screen
+#
+camera.hal1.packagelist=com.whatsapp,com.snapchat.android,com.instagram.android
