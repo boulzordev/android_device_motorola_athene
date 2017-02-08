@@ -3,6 +3,7 @@ allow rild cutback_data_file:sock_file create_file_perms;
 allow rild fsg_file:dir { search read open };
 allow rild fsg_file:file r_file_perms;
 allow rild fsg_file:lnk_file read;
+allow rild persist_file:dir search;
 allow rild persist_file:dir { open read search write };
 allow rild persist_file:file { getattr open read write };
 allow rild sensorservice_service:service_manager find;
