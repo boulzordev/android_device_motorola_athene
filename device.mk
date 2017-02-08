@@ -254,6 +254,10 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+#Amaze File Manager
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/prebuilts/AmazeFileManager-v3.1.1-release.apk:system/priv-app/AmazeFileManager/AmazeFileManager.apk
+ 
 PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf \
     wpa_supplicant_overlay.conf
