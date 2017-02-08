@@ -83,7 +83,10 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm8952
-	
+
+# OMS MASQUERADE
+ PRODUCT_PACKAGES += \
+   masquerade
 	
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
