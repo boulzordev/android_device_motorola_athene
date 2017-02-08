@@ -87,7 +87,11 @@ PRODUCT_PACKAGES += \
 # OMS MASQUERADE
  PRODUCT_PACKAGES += \
    masquerade
-	
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.rom.device=cm14g4oms
+
+
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
