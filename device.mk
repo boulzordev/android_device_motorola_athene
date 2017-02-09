@@ -96,6 +96,9 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rom.device=cm14g4oms
 
+# OTA
+PRODUCT_PACKAGES += \
+    ResurrectionOTA
 
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
