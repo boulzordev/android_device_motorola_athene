@@ -85,8 +85,13 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8952
 
 # OMS MASQUERADE
- PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
    masquerade
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.substratum.verified=true
+   
+   
 # OTA
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rom.device=cm14g4oms
