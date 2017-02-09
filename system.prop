@@ -156,7 +156,6 @@ ro.hwui.texture_cache_size=40
 
 # Media
 mm.enable.smoothstreaming=false
-mm.enable.sec.smoothstreaming=false
 media.stagefright.log-uri=1
 media.stagefright.use-awesome=false
 media.stagefright.enable-player=true
@@ -181,6 +180,11 @@ vidc.enc.dcvs.extra-buff-count=2
 vidc.enc.narrow.searchrange=1
 media.camera.ts.monotonic=1
 mm.enable.sec.smoothstreaming=false
+
+# Miracast
+ persist.debug.wfd.enable=1
+
+
 
 # GPS
 persist.mot.gps.conf.from.sim=true
