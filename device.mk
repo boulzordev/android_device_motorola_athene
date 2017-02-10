@@ -94,7 +94,7 @@ PRODUCT_PACKAGES += \
 
 # OTA
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rom.device=cm14g4oms
+    ro.rom.device=Unoffical
 
 # OTA
 PRODUCT_PACKAGES += \
