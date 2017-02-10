@@ -64,6 +64,14 @@ PRODUCT_COPY_FILES += \
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 
+# OMS MASQUERADE
+PRODUCT_PACKAGES += \
+   masquerade
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.substratum.verified=true
+   
+   
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
@@ -84,14 +92,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.primary.msm8952
 
-# OMS MASQUERADE
-PRODUCT_PACKAGES += \
-   masquerade
-
-PRODUCT_PROPERTY_OVERRIDES := \
-    ro.substratum.verified=true
-   
-   
 # OTA
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rom.device=cm14g4oms
@@ -130,6 +130,10 @@ PRODUCT_PROPERTY_OVERRIDES := \
 # CMActions
 PRODUCT_PACKAGES += \
     CMActions
+    
+# VIPER4ANDROID
+PRODUCT_PACKAGES += \
+    viper4android
 
 # Display
 PRODUCT_PACKAGES += \
