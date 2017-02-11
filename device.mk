@@ -131,8 +131,8 @@ PRODUCT_PACKAGES += \
     CMActions
     
 # VIPER4ANDROID
-PRODUCT_PACKAGES += \
-    VIPER4Android
+#PRODUCT_PACKAGES += \
+   # VIPER4Android
 
 # Display
 PRODUCT_PACKAGES += \
@@ -248,9 +248,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # Snapdragon apps
- PRODUCT_PACKAGES += \
-     SnapdragonGallery \
-     SnapdragonMusic
+ #PRODUCT_PACKAGES += \
+  #   SnapdragonGallery \
+   #  SnapdragonMusic
  
 
 # Sensors
