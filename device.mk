@@ -69,7 +69,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.substratum.verified=true
-   
+    
+ # Browser
+PRODUCT_PACKAGES += \
+    Gello  
    
 # Audio
 PRODUCT_PACKAGES += \
