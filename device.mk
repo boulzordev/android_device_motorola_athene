@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
     
 # VIPER4ANDROID
 PRODUCT_PACKAGES += \
-    ViPER4Android
+    VIPER4Android
 
 # Display
 PRODUCT_PACKAGES += \
