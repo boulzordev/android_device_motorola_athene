@@ -57,9 +57,8 @@ PRODUCT_COPY_FILES += \
 
 # Motorola Camera permissions
 PRODUCT_COPY_FILES += \
-  $(LOCAL_PATH)/permissions/com.motorola.camera.xml:system/etc/permissions/com.motorola.camera.xml \
-  $(LOCAL_PATH)/permissions/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml \
-  $(LOCAL_PATH)/permissions/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml
+ $(LOCAL_PATH)/configs/com.motorola.camera.xml:system/etc/permissions/com.motorola.camera.xml \
+ $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -124,16 +123,13 @@ PRODUCT_PACKAGES += \
     libbson \
     Snap
     
-PRODUCT_PROPERTY_OVERRIDES := \
-   ro.substratum.verified=true
-
 # CMActions
 PRODUCT_PACKAGES += \
     CMActions
     
 # VIPER4ANDROID
 PRODUCT_PACKAGES += \
-    viper4android
+    VIPER4android
 
 # Display
 PRODUCT_PACKAGES += \
