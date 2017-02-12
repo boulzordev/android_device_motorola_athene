@@ -29,3 +29,7 @@ PRODUCT_NAME := lineage_athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := athene
+
+#Superuser
+ WITH_SU := true
+ 

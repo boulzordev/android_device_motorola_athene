@@ -57,13 +57,23 @@ PRODUCT_COPY_FILES += \
 
 # Motorola Camera permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/com.motorola.camera.xml:system/etc/permissions/com.motorola.camera.xml \
-    $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml \
-    $(LOCAL_PATH)/configs/com.motorola.motosignature.xml:system/etc/permissions/com.motorola.motosignature.xml
+ $(LOCAL_PATH)/configs/com.motorola.camera.xml:system/etc/permissions/com.motorola.camera.xml \
+ $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 
+# OMS MASQUERADE
+PRODUCT_PACKAGES += \
+   masquerade
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.substratum.verified=true
+    
+ # Browser
+PRODUCT_PACKAGES += \
+    Gello  
+   
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
@@ -83,8 +93,15 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm8952
-	
-	
+
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.rom.device=Unoffical
+
+# OTA
+PRODUCT_PACKAGES += \
+    ResurrectionOTA
+
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
@@ -102,18 +119,22 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/surround_sound_3mic/surround_sound_rec_5.1.cfg:system/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg \
     $(LOCAL_PATH)/audio/surround_sound_3mic/surround_sound_rec_AZ.cfg:system/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 
-# Browser
-PRODUCT_PACKAGES += \
-    Gello
-
+ # VIPER4ANDROID
+  PRODUCT_PACKAGES += \
+      VIPER4Android
+ 
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
     Snap
-
+    
 # CMActions
 PRODUCT_PACKAGES += \
     CMActions
+    
+# VIPER4ANDROID
+#PRODUCT_PACKAGES += \
+   # VIPER4Android
 
 # Display
 PRODUCT_PACKAGES += \
@@ -228,6 +249,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
+# Snapdragon apps
+ #PRODUCT_PACKAGES += \
+  #   SnapdragonGallery \
+   #  SnapdragonMusic
+ 
+
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
@@ -248,6 +275,10 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+#Amaze File Manager
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/prebuilts/AmazeFileManager-v3.1.1-release.apk:system/priv-app/AmazeFileManager/AmazeFileManager.apk
+ 
 PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf \
     wpa_supplicant_overlay.conf
@@ -261,6 +292,11 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     tcpdump \
     wcnss_service
+    
+    # Enable Google Assistant
+    PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
+ 
 
 PRODUCT_COPY_FILES += \
     kernel/motorola/msm8952/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \

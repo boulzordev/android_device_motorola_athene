@@ -144,7 +144,7 @@ camera.lowpower.record.enable=1
 camera.display.lmax=1280x720
 camera.display.umax=1920x1080
 persist.camera.HAL3.enabled=1
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+camera.hal1.packagelist=com.whatsapp,com.snapchat.android,com.instagram.android,com.neuralprisma,com.cam001.selfie,com.picsart.studio,com.cyworld.camera,com.google.android.GoogleCamera
 
 # CNE
 persist.cne.feature=1
@@ -156,7 +156,6 @@ ro.hwui.texture_cache_size=40
 
 # Media
 mm.enable.smoothstreaming=false
-mm.enable.sec.smoothstreaming=false
 media.stagefright.log-uri=1
 media.stagefright.use-awesome=false
 media.stagefright.enable-player=true
@@ -181,6 +180,12 @@ vidc.enc.dcvs.extra-buff-count=2
 vidc.enc.narrow.searchrange=1
 media.camera.ts.monotonic=1
 mm.enable.sec.smoothstreaming=false
+
+# Miracast
+ persist.debug.wfd.enable=1
+ persist.sys.wft.virtual=0
+
+
 
 # GPS
 persist.mot.gps.conf.from.sim=true
@@ -265,3 +270,7 @@ ro.config.alarm_alert=Oxygen.ogg
 ro.config.ringtone=Moto.ogg
 ro.config.notification_sound=Moto.ogg
 ro.cutoff_voltage_mv=3200
+#
+# Fix green screen
+#
+camera.hal1.packagelist=com.whatsapp,com.snapchat.android,com.instagram.android
